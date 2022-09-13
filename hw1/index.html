@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Google Meet</title>
+    </head>
+    <body>
+        <section>
+            <div class="anchored-member">
+                <span class="mute-icon material-icons">
+                    mic_off
+                </span>
+                <div class="member-icon">
+                    <div class="member-control">
+
+                    </div>
+                </div>
+                <svg id="pin" focusable="false" height="24" viewBox="0 0 24 24" width="24" class="Hdh4hc cIGbvc NMm5M"><path d="M0 0h24v24H0z" fill="none" stroke="#000" stroke-opacity=".008" stroke-width="0"></path><path d="M17 4c0-1.1-.89-2-2-2H9c-1.1 0-2 .9-2 2v7l-2 3v2h6v5l1 1 1-1v-5h6v-2l-2-3V4z"></path></svg>
+                <span class="member-name">White man 1</span>
+            </div>
+            <div class="unanchored-members">
+                <div class="member-container">
+                    <div class="mute-icon-container">
+                        <span class="mute-icon material-icons">
+                            mic_off
+                        </span>
+                    </div>
+                    <div class="member-icon">
+                        <div class="member-control">
+                            
+                        </div>
+                    </div>
+                    <span class="member-name">White man 2</span>
+                </div>
+                <div class="member-container">
+                    <div class="mute-icon-container">
+                        <span class="mute-icon material-icons">
+                            mic_off
+                        </span>
+                    </div>
+                    <div class="member-icon">
+                        <div class="member-control">
+                        
+                        </div>
+                    </div>
+                    <span class="member-name">White man 3</span>
+                </div>
+                <div class="member-container">
+                    <div class="mute-icon-container">
+                        <span class="mute-icon material-icons">
+                            mic_off
+                        </span>
+                    </div>
+                    <div class="member-icon">
+                        <div class="member-control">
+                        
+                        </div>
+                    </div>
+                    <span class="member-name">White man 5</span>
+                </div>
+                <div class="member-container">
+                    <div class="mute-icon-container">
+                        <span class="mute-icon material-icons">
+                            mic_off
+                        </span>
+                    </div>
+                    <div class="member-icon">
+                        <div class="member-control">
+                        
+                        </div>
+                    </div>
+                    <span class="member-name">White man 4</span>
+                </div>
+                <div id="bigger-width-container" class="member-container">
+                    <div class="mute-icon-container">
+                        <span class="mute-icon material-icons">
+                            mic_off
+                        </span>
+                    </div>
+                    <div  class="member-icon">
+                        <div class="member-control">
+                        
+                        </div>
+                    </div>
+                    <span class="member-name">White man 6</span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="time_and_meeting-code">
+                <p id="time">中午12:22 &nbsp|&nbsp</p>
+                <p id="meeting-code">jfi-eweg-ors</p>
+            </div>
+            <div class="control-buttons">
+                <div class="control-button on-off-control-button">
+                    <input id="mic-button" type="checkbox" />
+                    <label for="mic-button">
+                        <span name="關閉麥克風 (Ctrl + D)" class="control-button-on material-icons">
+                            mic
+                        </span>
+                        <span name="開啟麥克風 (Ctrl + D)" class="control-button-off material-icons">
+                            mic_off
+                        </span>
+                    </label>
+                    <p class="control-button-on discription">
+                        關閉麥克風 (Ctrl + D)
+                    </p>
+                    <p class="control-button-off discription">
+                        開啟麥克風 (Ctrl + D)
+                    </p>
+                </div>
+                <div class="control-button on-off-control-button">
+                    <input id="camera-button" type="checkbox" />
+                    <label for="camera-button">
+                        <span name="關閉攝影機 (Ctrl + E)" class="control-button-on material-symbols-outlined">
+                            videocam
+                        </span>
+                        <span name="開啟攝影機 (Ctrl + E)" class="control-button-off material-symbols-outlined">
+                            videocam_off
+                        </span>
+                    </label>
+                    <p class="discription">
+                        關閉攝影機 (Ctrl + E)
+                    </p>
+                    <p class="discription">
+                        開啟攝影機 (Ctrl + E)
+                    </p>
+                </div>
+                <div class="control-button">
+                    <input id="screen-share-button" type="checkbox" />
+                    <label for="screen-share-button">
+                        <span name="立即分享螢幕畫面" class="material-symbols-outlined">
+                            present_to_all
+                        </span>
+                    </label>
+                    <p class="discription">
+                        立即分享螢幕畫面
+                    </p>
+                </div>
+                <div class="control-button">
+                    <input id="more-option-button" type="checkbox" />
+                    <label for="more-option-button">
+                        <span name="更多選項" class="material-icons-outlined">
+                            more_vert
+                        </span>
+                    </label>
+                    <p class="discription">
+                        更多選項
+                    </p>
+                </div>
+                <div class="control-button">
+                    <input id="hang-up-button" type="checkbox" />
+                    <label for="hang-up-button">
+                        <span name="退出通話" class="material-icons">
+                            call_end
+                        </span>
+                    </label>
+                    <p class="discription">
+                        退出通話
+                    </p>
+                </div>
+            </div>
+            <div class="utility-buttons">
+                <div class="utility-button">
+                    <input name="utility" id="activities-button" type="radio" />
+                    <label for="activities-button">
+                        <span name="活動" class="utility-button-off material-symbols-outlined">
+                            category
+                        </span>
+                        <span class="utility-button-on material-icons">
+                            category
+                        </span>
+                    </label>
+                    <p class="discription">
+                        活動
+                    </p>
+                </div>
+            
+                <div class="utility-button">
+                    <input name="utility" id="chat-button" type="radio" />
+                    <label for="chat-button">
+                        <span name="與所有參與者進行即時通訊" class="utility-button-off material-symbols-outlined">
+                            chat
+                        </span>
+                        <span class="utility-button-on material-icons">
+                            chat_bubble
+                        </span>
+                    </label>
+                    <p class="discription">
+                        與所有參與者進行即時通訊
+                    </p>
+                </div>
+                <div class="utility-button">
+                    <input name="utility" id="show-members-button" type="radio" />
+                    <label name="顯示所有參與者" for="show-members-button">
+                        <span class="utility-button-off material-icons-outlined">
+                            people_alt
+                        </span>
+                        <span class="utility-button-on material-icons">
+                            people_alt
+                        </span>
+                    </label>
+                    <p class="discription">
+                        顯示所有參與者
+                    </p>
+                    <div id="people-count-sign">
+                        <span id="people-count">
+                            6
+                        </span>
+                    </div>
+
+                </div>
+                <div class="utility-button">
+                    <input name="utility" id="info-button" type="radio" />
+                    <label name="會議詳細資料" for="info-button">
+                        <span class="utility-button-off material-icons-outlined">
+                            info
+                         </span>
+                         <span class="utility-button-on material-icons">
+                            info
+                         </span>
+                    </label>
+                    <p class="discription">
+                        會議詳細資料
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
