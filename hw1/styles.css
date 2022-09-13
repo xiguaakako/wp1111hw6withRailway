@@ -79,9 +79,8 @@ section { height: 90vh; }
     transform: translate(-50%, -50%);
 }
 
-.member-icon:hover .member-control {
-    display: unset;
-}
+.anchored-member:hover .member-control { display: unset; }
+.member-container:hover .member-control { display: unset; }
 
 .member-name {
     background: transparent;
