@@ -16,12 +16,9 @@ html, body {
     font-family: 'Roboto',Helvetica,Arial,sans-serif;
     
     overflow: hidden;
-    
 }
 
-
-
-/* Font style setting */
+/* Symbol font style setting */
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -168,7 +165,7 @@ section {
 .member-name:hover { cursor: default; }
 .member-name::selection { background: transparent; }
  
-/* description of buttons*/
+/* Fescription of buttons*/
 
 .description {
     border: solid #3c4043;
