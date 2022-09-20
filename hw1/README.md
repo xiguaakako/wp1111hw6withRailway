@@ -18,11 +18,16 @@ I prohibited it from becoming a "I" like style when hovering on words that can b
 ### Selection of words
 In the actual Google Meet page, all words *but the meeting code* can't be selected. I used `...::selection { background: transparent; }` to fake it (Actually you can still copy words if you select them in a right way ^w^|||). 
 ### Description of button function
+<<<<<<< HEAD
 ![](Pasted_image_20220919012502.png)
+=======
+![test](Pasted_image_20220919012502.png)
+>>>>>>> 30006273f763a9c852287cfc62d57b4a47bfa180
 Upon hovering on any button in the page, a `<p>` element appears **with smooth opacity transition** introducing the function of that button.
 ###  Designing buttons using `<input type="checkbox">`
 Using the same trick we learned in class (todo) we can use  `<input type="checkbox">`  to implement the buttonso at the bottom. 
 If we click on the red button with description `開啟攝影機 (Ctrl + E)`, shown in the picture above, it turns black, with the icon and the description changing.
+<<<<<<< HEAD
 ![](Pasted_image_20220919012442.png)
 Only the first two buttons are designed to be able to turn red when checked. Nothing happens when trying to check other buttons.
 Also note that when we hover on those buttons the lightness of the background color changes a little bit.
@@ -30,6 +35,15 @@ Also note that when we hover on those buttons the lightness of the background co
 ![](Pasted_image_20220919011024.png)
 Buttons at the bottom-right corner turns blue upon checking, and one should notice that when checking any other button, the original one turns white.
 ![](Pasted_image_20220919011403.png)
+=======
+![](Pasted image 20220919012442.png)
+Only the first two buttons are designed to be able to turn red when checked. Nothing happens when trying to check other buttons.
+Also note that when we hover on those buttons the lightness of the background color changes a little bit.
+### Designing buttons using `<input type="radio">`
+![](Pasted image 20220919011024.png)
+Buttons at the bottom-right corner turns blue upon checking, and one should notice that when checking any other button, the original one turns white.
+![](Pasted image 20220919011403.png)
+>>>>>>> 30006273f763a9c852287cfc62d57b4a47bfa180
 So I decided to use `<input type="radio">` to implement these buttons. However, embarrassingly, they can't be unchecked. Seemingly it's impossible without introducing JavaScript.
 ### Fade in/out animation
 By setting the transition of opacity of an element we can implement the fade in/out animations.
@@ -38,6 +52,13 @@ Note that the three buttons emerging from the member icon undergo **first opacit
 ## RWD
 Since it's to hard to guess what engineers from Google think and actually implement RWD effects in correct conditions, I tried my best to imitate cases that the window is not distorted too much, and went on my own way in the rest of the cases.
 It's worth noticing that the meeting code is shortened with `...` when the footer are too crowded:
+<<<<<<< HEAD
 ![](Pasted_image_20220919020529.png)
+=======
+![](Pasted image 20220919020529.png)
+
+![image](Pasted image 20220919020529.png)
+
+>>>>>>> 30006273f763a9c852287cfc62d57b4a47bfa180
 
 
