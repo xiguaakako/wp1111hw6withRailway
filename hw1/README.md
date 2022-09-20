@@ -39,6 +39,6 @@ Note that the three buttons emerging from the member icon undergo **first opacit
 Since it's to hard to guess what engineers from Google think and actually implement RWD effects in correct conditions, I tried my best to imitate cases that the window is not distorted too much, and went on my own way in the rest of the cases.
 It's worth noticing that the meeting code is shortened with `...` when the footer are too crowded:
 ![](Pasted image 20220919020529.png)
-![heyhey](hw1/Pasted image 20220919004244.png)
+[heyhey](hw1/Pasted image 20220919004244.png)
 
 
