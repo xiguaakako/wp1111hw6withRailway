@@ -18,7 +18,7 @@ I prohibited it from becoming a "I" like style when hovering on words that can b
 ### Selection of words
 In the actual Google Meet page, all words *but the meeting code* can't be selected. I used `...::selection { background: transparent; }` to fake it (Actually you can still copy words if you select them in a right way ^w^|||). 
 ### Description of button function
-![test](Pasted image 20220919012502.png)
+![test](./Pasted image 20220919012502.png)
 Upon hovering on any button in the page, a `<p>` element appears **with smooth opacity transition** introducing the function of that button.
 ###  Designing buttons using `<input type="checkbox">`
 Using the same trick we learned in class (todo) we can use  `<input type="checkbox">`  to implement the buttonso at the bottom. 
