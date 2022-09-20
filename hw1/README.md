@@ -40,7 +40,7 @@ Since it's to hard to guess what engineers from Google think and actually implem
 It's worth noticing that the meeting code is shortened with `...` when the footer are too crowded:
 ![](Pasted image 20220919020529.png)
 
-![image](https://user-images.githubusercontent.com/96676117/191177162-1e2ddce0-13a0-45ff-909d-d904f123b30c.png)
+![image](Pasted image 20220919020529.png)
 
 
 
