@@ -64,7 +64,7 @@ If a member is not anchored, the the icon shown would be a "pin", while it would
 
 ### The member counter shows the correct number!
 
-![](member.counter.png)
+![](member_counter.png)
 
 Although not included in the requirements, I set the number shown on the top-left corner of the "show the member list" button as the correct member count.
 
