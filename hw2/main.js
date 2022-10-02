@@ -24,6 +24,38 @@ const utility_buttons = document.querySelector(".utility-buttons");
 const control_buttons = document.querySelector(".control-buttons");
 control_buttons.style.transform = "translate(2vw, 0)";
 
+const time_element = document.querySelector("#time");
+update_time();
+window.setInterval(update_time, 1000);
+function update_time() {
+    let current_date = new Date();
+    let raw_hours = current_date.getHours();
+    let time_prefix;
+    if (raw_hours === 0) {
+        time_prefix = `午夜`;
+        raw_hours = 12;
+    }
+    else if (1 <= raw_hours && raw_hours <= 11) {
+        time_prefix = `上午`;
+    }
+    else if (raw_hours === 12) {
+        time_prefix = `中午`;
+    }
+    else if (13 <= raw_hours && raw_hours <= 17) {
+        time_prefix = `下午`;
+        raw_hours -= 12;
+    }
+    else if (18 <= raw_hours && raw_hours <= 23) {
+        time_prefix = `晚上`;
+        raw_hours -= 12;
+    }
+
+    let hours = ("0" + raw_hours.toString()).slice(-2);
+    let minutes = ("0" + current_date.getMinutes().toString()).slice(-2);
+    let time = hours + ":" + minutes;
+    time_element.textContent = `${time_prefix}\xa0${time}\xa0|\xa0`;
+}
+
 arrange_members();
 
 // Create a new mute icon!
