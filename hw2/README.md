@@ -62,6 +62,12 @@ If a member is not anchored, the the icon shown would be a "pin", while it would
 
 ※*My imploration*: Actually the wrong description shown `「將Edge固定在主畫面」` was a bug in my HW#1, please just ignore it QwQ. The contents of the descriptions were deeply etched in my HTML code and it might take me another 50 hours to modify them all in JavaScript... 
 
+### The member counter shows the correct number!
+
+![](member.counter.png)
+
+Although not included in the requirements, I set the number shown on the top-left corner of the "show the member list" button as the correct member count.
+
 ## Postscript
 
 If you have any suggestions about the code or the webpage, please write them down in the review! I know my code is so redundant and it surely can be more succinct with more JavaScript techniques ^w^|||
