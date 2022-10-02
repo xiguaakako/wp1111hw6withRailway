@@ -536,6 +536,7 @@ function arrange_members() {
             
             const member_icon = member_containers[0].querySelector(".member-icon");
             const member_name = member_containers[0].querySelector(".member-name");
+            const mute_icon_container = member_containers[0].querySelector(".mute-icon-container");
             member_icon.style.top = "";
             member_icon.style.left = "";
             member_icon.style.width = "145px";
@@ -544,6 +545,7 @@ function arrange_members() {
             member_icon.style.transform = `translate(calc(50vw - 50%), calc((100vh - 71.36px)/2 - 50%))`;
             member_name.style.top = "100%";
             member_name.style.transform = `translate(18px, -29.6px)`;
+            mute_icon_container.style.visibility = "hidden";
         }
         
         if (people_count === 2){
@@ -576,6 +578,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
             )
             
@@ -607,6 +610,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
             )
             
@@ -638,6 +642,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
             )
             
@@ -669,6 +674,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
                 
             )
@@ -686,6 +692,7 @@ function arrange_members() {
                         const bigger_mute_icon_container = bigger_member.querySelector(".mute-icon-container");
                         bigger_member_icon.style.transform = `translate(calc(${tSvw(bigger_width/2)} - 50%), calc(${tSvh(bigger_height/2)} - 50%))`;
                         bigger_mute_icon_container.style.transform = `translate(calc(${tSvw(bigger_width)} - 150%), 50%)`;
+                        bigger_mute_icon_container.style.visiblity = "";
                     }
                 )
             }
@@ -717,6 +724,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
                 
             )
@@ -735,6 +743,7 @@ function arrange_members() {
                         const bigger_mute_icon_container = bigger_member.querySelector(".mute-icon-container");
                         bigger_member_icon.style.transform = `translate(calc(${tSvw(bigger_width/2)} - 50%), calc(${tSvh(bigger_height/2)} - 50%))`;
                         bigger_mute_icon_container.style.transform = `translate(calc(${tSvw(bigger_width)} - 150%), 50%)`;
+                        bigger_mute_icon_container.style.visiblity = "";
                     }
                 )
             }
@@ -767,6 +776,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
                 
             )
@@ -799,6 +809,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
             )
         }
@@ -829,6 +840,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
             )
             if (people_count === 11){
@@ -846,6 +858,7 @@ function arrange_members() {
                         const bigger_mute_icon_container = bigger_member.querySelector(".mute-icon-container");
                         bigger_member_icon.style.transform = `translate(calc(${tSvw(bigger_width/2)} - 50%), calc(${tSvh(bigger_height/2)} - 50%))`;
                         bigger_mute_icon_container.style.transform = `translate(calc(${tSvw(bigger_width)} - 150%), 50%)`;
+                        bigger_mute_icon_container.style.visiblity = "";
                     }
                 )
             }
@@ -877,6 +890,7 @@ function arrange_members() {
                     member_name.style.top = "";
                     member_name.style.transform = `translate(1vw, calc(${tSvh(height)} - 30px))`;
                     mute_icon_containers[0].style.transform = `translate(calc(${tSvw(width)} - 150%), 50%)`;
+                    mute_icon_containers[0].style.visibility = "";
                 }
             )
             if (people_count === 13){
@@ -894,6 +908,7 @@ function arrange_members() {
                         const bigger_mute_icon_container = bigger_member.querySelector(".mute-icon-container");
                         bigger_member_icon.style.transform = `translate(calc(${tSvw(bigger_width/2)} - 50%), calc(${tSvh(bigger_height/2)} - 50%))`;
                         bigger_mute_icon_container.style.transform = `translate(calc(${tSvw(bigger_width)} - 150%), 50%)`;
+                        bigger_mute_icon_container.style.visiblity = "";
                     }
                 )
             }
@@ -913,10 +928,10 @@ function arrange_members() {
                         const bigger_mute_icon_container = bigger_member.querySelector(".mute-icon-container");
                         bigger_member_icon.style.transform = `translate(calc(${tSvw(bigger_width/2)} - 50%), calc(${tSvh(bigger_height/2)} - 50%))`;
                         bigger_mute_icon_container.style.transform = `translate(calc(${tSvw(bigger_width)} - 150%), 50%)`;
+                        bigger_mute_icon_container.style.visiblity = "";
                     }
                 )
             }
         }
     }
-    
 }
