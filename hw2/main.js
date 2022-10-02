@@ -1,30 +1,68 @@
-/* -----------Selecting and creating elements-----------*/
+/* -----------Selecting and creating, and initializing elements----------- */
 
+// Node of <head> 
+const head = document.querySelector("head");
+
+// Node of <title> 
+const title = document.querySelector("title");
+
+// Node of <section> 
 const section = document.querySelector("section");
 
-let member_containers = document.querySelectorAll(".member-container");
-const member_to_clone = document.querySelector(".member-container").cloneNode(true);
-let bigger_member_container = document.querySelector("#bigger-width-container");
-bigger_member_container.removeAttribute('id');
+// Node of the container of unanchored members
+let unanchored_members = document.querySelector(".unanchored-members");
 
-let unanchored_member_controls = document.querySelectorAll(".unanchored-members .member-control");
+// NodeList of all unanchored members
+let member_containers = document.querySelectorAll(".member-container");
 let anchored_member_control = document.querySelectorAll(".anchored-member .member-control");
 
-let unanchored_members = document.querySelector(".unanchored-members");
+// NodeList of all unanchored members (and their control buttons)
 let anchored_member = document.querySelectorAll(".anchored-member");
+let unanchored_member_controls = document.querySelectorAll(".unanchored-members .member-control");
 
+// Node of the utility buttons
+const utility_buttons = document.querySelector(".utility-buttons");
+
+// Node of the contorl buttons
+const control_buttons = document.querySelector(".control-buttons");
+
+// Node of the time
+const time_element = document.querySelector("#time");
+
+// Nodes of the anchored member's pin icon and mute icon
 const pin = document.querySelector("#pin");
 const anchored_mute_icon = document.querySelector(".anchored-member span");
 
+// Node of the people count 
 const people_count_element = document.querySelector("#people-count");
 let people_count = parseInt(people_count_element.textContent);
 
-const utility_buttons = document.querySelector(".utility-buttons");
 
-const control_buttons = document.querySelector(".control-buttons");
+// Fixing bugs in HW1
+anchored_member[0].lastElementChild.textContent = "你";
+
 control_buttons.style.transform = "translate(2vw, 0)";
 
-const time_element = document.querySelector("#time");
+title.textContent = "Meet - jfi-eweg-ors";
+
+const webpage_icon = document.createElement("link");
+webpage_icon.setAttribute("rel", "icon");
+webpage_icon.setAttribute("href", "Meet_Icon.png");
+head.appendChild(webpage_icon);
+
+// Preparing intial members array, for implementing adding random members
+let initial_members = [];
+member_containers.forEach(
+    member_container => {
+        initial_members.push(member_container);
+    }
+)
+
+// Removing original design of bigger member container in CSS
+let bigger_member_container = document.querySelector("#bigger-width-container");
+bigger_member_container.removeAttribute('id');
+
+// The clock 
 update_time();
 window.setInterval(update_time, 1000);
 function update_time() {
@@ -35,7 +73,10 @@ function update_time() {
         time_prefix = `午夜`;
         raw_hours = 12;
     }
-    else if (1 <= raw_hours && raw_hours <= 11) {
+    else if (1 <= raw_hours && raw_hours <= 5) {
+        time_prefix = `凌晨`;
+    }
+    else if (6 <= raw_hours && raw_hours <= 11) {
         time_prefix = `上午`;
     }
     else if (raw_hours === 12) {
@@ -53,32 +94,33 @@ function update_time() {
     let hours = ("0" + raw_hours.toString()).slice(-2);
     let minutes = ("0" + current_date.getMinutes().toString()).slice(-2);
     let time = hours + ":" + minutes;
-    time_element.textContent = `${time_prefix}\xa0${time}\xa0|\xa0`;
+    time_element.textContent = `${time_prefix}\xa0${time}\xa0\xa0|\xa0\xa0`;
 }
 
+// Arranging the members in appropriate positions, for initialization here.
 arrange_members();
 
-// Create a new mute icon!
+// Creating a new mute icon!
 function cloning_mute_icon() {
     const mute_icon_container = document.querySelector(".mute-icon-container").cloneNode(true);
-    
     return mute_icon_container;
 }
 
-// Create a new member!
+// Creating a new member!
 function cloning_member() {
-    const clone_member = member_to_clone.cloneNode(true);
+    let random_number = Math.floor(Math.random() * 5);
+    const clone_member = initial_members[random_number].cloneNode(true);
     const clone_member_control = clone_member.querySelector(".member-control");
     clone_member_control.onclick = anchoring;
 
-    clone_member.appendChild(make_remove_button_container())
+    clone_member.appendChild(make_remove_button_container());
     const clone_member_remove_button_container = clone_member.querySelector(".remove-button-container");
 
     clone_member_remove_button_container.onclick = remove_member;
     return clone_member;
 }
 
-// Create a new remove button!
+// Creating new remove buttons!
 function make_remove_button_container() {
     const remove_button_container = document.createElement("div");
     remove_button_container.className = "remove-button-container";
@@ -95,30 +137,16 @@ function make_remove_button_container() {
     remove_button.style["user-select"] = "none";
     remove_button_container.appendChild(remove_button);
 
-
     remove_button_container.style.position = "absolute";
     remove_button_container.style.cursor = "pointer";
     
     remove_button_container.onclick = remove_member;
     
-    
     return remove_button_container;
 }
-
-function remove_member() {
-    if (this.parentNode === anchored_member[0]) unanchoring();
-    this.parentNode.parentNode.removeChild(this.parentNode);
-    member_containers = document.querySelectorAll(".member-container");
-    people_count--;
-    people_count_element.textContent = people_count.toString();
-    if (people_count < 10) {
-        people_count_element.style.left = "4px";
-    } 
-    if (people_count === 1 && anchored_member.length === 1) {
-        unanchoring();
-    }
-    arrange_members();
-}
+member_containers.forEach(
+    member_container => {member_container.appendChild(make_remove_button_container())}
+)
 
 // Create a new add button!
 function make_add_button_container() {
@@ -143,9 +171,25 @@ function make_add_button_container() {
     add_button_container.style["align-items"] = "center";
     add_button_container.onclick = add_member;
     
-    
     return add_button_container;
 }
+utility_buttons.appendChild(make_add_button_container());
+
+function remove_member() {
+    if (this.parentNode === anchored_member[0]) unanchoring();
+    this.parentNode.parentNode.removeChild(this.parentNode);
+    member_containers = document.querySelectorAll(".member-container");
+    people_count--;
+    people_count_element.textContent = people_count.toString();
+    if (people_count < 10) {
+        people_count_element.style.left = "4px";
+    } 
+    if (people_count === 1 && anchored_member.length === 1) {
+        unanchoring();
+    }
+    arrange_members();
+}
+
 function add_member() {
     
     if (people_count < 15){
@@ -162,13 +206,8 @@ function add_member() {
     }
     else alert('Buy Google Meet Pro to extend the maximum of members in your meeting!');
 }
-utility_buttons.appendChild(make_add_button_container());
 
-member_containers.forEach(
-    member_container => {member_container.appendChild(make_remove_button_container())}
-)
-
-/*-----------Anchoring and unanchoring members-----------*/
+/* -----------Anchoring and unanchoring members----------- */
 if (anchored_member_control) {
     anchored_member_control[0].onclick = unanchoring;
 }
