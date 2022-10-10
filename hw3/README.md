@@ -28,10 +28,6 @@ The annoying scroll bars are of similar problems. One of my frineds pointed out 
 
 I manually modified the `styles.css` given to hide the scroll bars, so you might need to use your mouse wheel to browse the items when there are a lot.
 
-### **Rejecting blank input**
-
-If the user try to create an item with blank detail, the system will just ignore it.
-
 ### **Show all items upon submitting**
 
 If we click the `Completed` button first, submitting, defaultly we'll find the list awkward because it shows *the Completed items* and *newly added items*. The newly added items might exclaim *"Why am I here?"* and escape to somewhere.
@@ -48,12 +44,17 @@ Since I'm new to React.js so I only tried to put create the functional component
 
 ## **Other cool details / animation / effects**
 
+### **Rejecting blank input**
 
+If the user try to create an item with blank detail, the system will just ignore it.
 
 ### **Cursor style**
 
 Nothing new. I modified the the cursor style in `styles.css` to let it become a pointer when it's hovering the "x" buttons. 
 
+### **Input words vanish upon submitting**
+
+Gernerally after we submit some words in the input field, the words vanish. I added it into my design though it wasn't metioned in the homework descriptions:D
 
 ## **Postscript**
 
