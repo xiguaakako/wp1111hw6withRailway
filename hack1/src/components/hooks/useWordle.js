@@ -41,14 +41,13 @@ const useWordle = (solution) => {
         }
         // (3) Press Enter, store curGuess to guesses, reset curGuess and update parameters .
     
-        // console.log("Press Enter!!!! Store and reset curGuess!");
+        //console.log("Press Enter!!!! Store and reset curGuess!");
         // TODO 4: Check each wordbox's color in `curGuess` and update `guess`, `turn` and `curGuess`
         // Hint: check green first, and then check yellow.
         const solutionSet = solution.split('');
-        const curGuessSet = curGuess.split('');
-        for (let i = 0; i < curGuessSet.length; ++i) {
-            if (curGuessSet[i] === solutionSet[i]){
-                
+        for (let i = 0; i < curGuess.length; ++i) {
+            if (curGuess[i] === solutionSet[i]){
+                solutionSet.splice(i, 1);
             }
         }
 

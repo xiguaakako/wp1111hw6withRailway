@@ -15,18 +15,15 @@ const Row = ({ guess, rowIdx }) => {
             {/* TODO 3: Row Implementation -- Row */}
             
             {/* ↓ Default row, you should modify it. ↓ */}
-            
             <div className='Row-wrapper'>
-                {guess.map((letter, index)=>{
-                    if (letter.char !== '')
+                {guess.map((letter, index)=>{ return (letter.char !== '')?
                         <div 
                             id={`${rowIdx}-${index}`} 
                             key={`${rowIdx}-${index}`} 
                             className={`Row-wordbox ${letter.color}`}
                         >
                             {letter.char}
-                        </div>
-                    else 
+                        </div>:
                         <div 
                             id={`${rowIdx}-${index}`} 
                             key={`${rowIdx}-${index}`} 
