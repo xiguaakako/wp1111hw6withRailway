@@ -45,17 +45,38 @@ const useWordle = (solution) => {
         // TODO 4: Check each wordbox's color in `curGuess` and update `guess`, `turn` and `curGuess`
         // Hint: check green first, and then check yellow.
         const solutionSet = solution.split('');
+        const curGuessColor = ['', '', '', '', ''];
         for (let i = 0; i < curGuess.length; ++i) {
             if (curGuess[i] === solutionSet[i]){
                 solutionSet.splice(i, 1);
+                curGuessColor[i] = 'green';
             }
+        }
+        for (let i = 0; i < solutionSet.length; ++i) {
+            if (curGuess[i] === solutionSet[i]){
+                solutionSet.splice(i, 1);
+                curGuessColor[i] = 'green';
+            }
+        }
+        for (let i = 0; i < solutionSet.length; ++i) {
+            for (let j = 0; j < curGuess.length; ++j){
+                if (curGuess[j] === solutionSet[i]){
+                    solutionSet.splice(i, 1);
+                    curGuessColor[j] = 'yellow';
+                }
+            }
+        }
+        for (let i = 0; i < curGuessColor.length; ++i) {
+            if (curGuessColor[i] === '') curGuessColor[i] = 'grey';
         }
 
         // add the formatted guess generated into guesses.
         
-        // turn += 1
+        setGuesses(guesses => guesses.append(curGuess.map((letter, index) =>{return {char: letter; color: curGuessColor[index]}})))
+
+        turn += 1;
         
-        // set curGuess to default
+        curGuess= [];
 
 
         // TODO 5: update parameters, check each char usage and show in `Keyboard` and reset `curGuess`.
