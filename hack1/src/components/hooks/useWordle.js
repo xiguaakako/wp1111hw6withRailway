@@ -72,7 +72,7 @@ const useWordle = (solution) => {
 
         // add the formatted guess generated into guesses.
         
-        setGuesses(guesses => guesses.append(curGuess.map((letter, index) =>{return {char: letter; color: curGuessColor[index]}})))
+        setGuesses(guesses => guesses.append(curGuess.map((letter, index) =>{return {char: letter, color: curGuessColor[index]}})))
 
         turn += 1;
         
