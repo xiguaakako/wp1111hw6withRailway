@@ -15,8 +15,6 @@ We've included a bunch of packages now. That makes me nervous.
 
 When I was reviewing others' HW5, I found that compile errors would occur if I didn't `yarn add axios`. I wished I wasn't going to get `dead`s.
 
-Problems here. What should I do when I'm reviewing HW6? How can I deal with mongoDB? Will I need to install packages on my own? 
-
 BTW I gave up completing the advanced requirements since it seemed like I needed to install more packages for more material-UI objects (like `tabs` or `tables` maybe).
 
 ## **Basic / Advanced requirements**
