@@ -9,7 +9,8 @@ query GET_ITEMS_QUERY {
     date
     # TODO 2.1 Write query GraphQL
     amount
-    description
+    category
+    
     # TODO 2.1 End
     }
   }

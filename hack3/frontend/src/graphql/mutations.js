@@ -4,7 +4,7 @@ import { gql } from '@apollo/client';
 
 export const CREATE_ITEM_MUTATION = gql`
   mutation CreateItem($input: CreateItemInput!) {
-    createItem($input: $input) {
+    createItem(input: $input) {
       id
       name
       amount
